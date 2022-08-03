@@ -19,6 +19,7 @@ export const getProductByid = async (req, res) =>{
         const products = await Product.findOne({"id": id});
 
         res.status(200).json(products);
+        console.log(products);
     }
     catch(error){
         res.status(500).json({message: error.message});
